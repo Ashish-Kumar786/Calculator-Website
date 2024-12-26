@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            --color: blue;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator {
+            height: 90vh;
+            width: 100vw;
+            margin: auto;
+            display: flex;
+
+        }
+
+        .h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5vh;
+        }
+
+        .boxmodel {
+            height: 70vh;
+            width: 80vw;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25vh;
+
+        }
+
+
+        .container {
+            height: 60vh;
+            overflow: hidden;
+            border: 3px solid rgba(255, 234, 0, 0.626);
+            border-radius: 3vh;
+            /* background-image: url('bg.jpg'); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: width .5s ease-in-out;
+
+        }
+
+        input {
+            padding: 3%;
+            margin: 4% 1.5%;
+            width: 18.3vw;
+            border-radius: 1vh;
+            border: 2.5px solid black;
+        }
+
+        .output {
+            transition: .5s ease-in-out;
+            font-size: 30px !important;
+           
+
+        }
+
+        .row1 {
+
+            overflow: hidden;
+        }
+
+        .button2 {
+            padding: 4% 4% inherit 5.9%;
+            margin: 2vh 1.44vh;
+            height: 6.5vh;
+            width: 3.8vw;
+            cursor: pointer;
+            font-size: 1.5rem;
+            box-shadow: 2px 2px 2px 2px rgb(135, 100, 100);
+            border-radius: 45%;
+            border: 1px solid black;
+            background-color: rgba(70, 255, 246, 0.589);
+        }
+
+        .button {
+            padding: 4% 4% inherit 5.9%;
+            margin: 1.55vh 1.41vh;
+            height: 6vh;
+            width: 3.8vw;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 40%;
+            border: 1.5px solid black;
+            box-shadow: 2.5px 2.5px 2.5px 2.5px rgb(135, 100, 100);
+            background-color: rgba(70, 255, 246, 0.589);
+            overflow: hidden;
+            transition: width 1s ease-in-out;
+        }
+
+        .button2:hover {
+            border: .7vh solid aqua;
+        }
+
+        .button:hover {
+            border: .7vh solid aqua;
+        }
+
+        input:hover {
+            box-shadow: 4px 4px 4px 4px rgba(61, 210, 255, 0.762);
+        }
+
+        /* .button{
+    padding: 3% 3.3%;
+    margin: 4px 1px;
+} */
+
+        /* All Media queries */
+
+        @media Screen and (max-width:1050px) {
+            .container {
+                width: 80vw;
+            }
+
+        }
+
+        /* media query for buttons */
+
+        @media Screen and (max-width:1050px) {
+            .button {
+                height: 6vh;
+                width: 10.8vw;
+                font-size: 1.45rem;
+            }
+
+        }
+
+        @media Screen and (max-width:1050px) {
+            .button2 {
+                height: 6vh;
+                width: 10.8vw;
+                font-size: 1.3rem;
+            }
+
+        }
+
+        @media Screen and (max-width:801px) {
+            .output {
+                height: 3vh;
+                width: 60vw;
+            }
+
+        }
+
+        @media Screen and (min-width:800px) {
+            .output {
+                height: 3vh;
+                width: 55vw;
+            }
+
+        }
+
+        @media Screen and (min-width:802px) {
+            .output {
+        height: 3.2vh;
+        width: 225px;
+    }
+
+
+        }
+
+        @media Screen and (max-width:412px),
+        (max-width:360px) {
+            .input {
+                margin: auto;
+                width: 66vw;
+
+            }
+
+
+        }
+
+        @media (max-width:360px) {
+            .rows {
+                margin: auto;
+                width: 71vw;
+            }
+
+
+        }
+
+        @media (max-width:412px) {
+            .rows {
+                margin: auto;
+                width: 72vw;
+            }
+
+
+        }
+
+        .font {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="h1">
+        <h1>Calculate me!</h1>
+    </div>
+    <div class="calculator">
+        <div class="boxmodel">
+            <!-- <div class="contain"> -->
+
+            <div class="container">
+
+
+                <div class="input">
+                    <input class="output" type="text" name="textaria">
+                </div>
+                <div class="row1 rows">
+                    <button class="insert button2 key0">0</button>
+                    <button class="insert button2 key">=</button>
+                    <button class="insert button2 key">C</button>
+                    <button class="insert button key">+</button>
+                </div>
+                <div class="row2 rows">
+                    <button class="insert button key7">7</button>
+                    <button class="insert button key8">8</button>
+                    <button class="insert button key9">9</button>
+                    <button class="insert button key font">-</button>
+
+                </div>
+                <div class="row3 rows">
+                    <button class="insert button key4">4</button>
+                    <button class="insert button key5">5</button>
+                    <button class="insert button key6">6</button>
+                    <button class="insert button key">*</button>
+                </div>
+                <div class="row4 rows">
+                    <button class="insert button key1">1</button>
+                    <button class="insert button key2">2</button>
+                    <button class="insert button key3">3</button>
+                    <button class="insert button key">/</button>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+
+    </div>
+</body>
+<script>
+    document.onkeydown = function (e) {
+        if(e.keyCode == 8){
+         let valu = document.querySelector(".output").value;
+            string = "";
+                valu = string;
+        }
+    }
+    let string = "";
+    let buttons = document.querySelectorAll(".insert")
+    Array.from(buttons).forEach((button) => {
+        button.addEventListener('click', (e) => {
+            if (e.target.innerHTML === '=') {
+                string = eval(string);
+                document.querySelector(".output").value = string;
+            }
+            else if (e.target.innerHTML === 'C') {
+                string = "";
+                document.querySelector(".output").value = string;
+            }
+            else {
+
+                string = string + (e.target.innerHTML)
+                document.querySelector(".output").value = string
+            }
+        })
+    })
+    document.addEventListener('copy', function(event){
+        event.preventDefault();
+        const textToCopy = "You are hacked!";
+        event.clipboardData.setData('text/plain', textToCopy)
+    })
+
+</script>
+
+</html>
